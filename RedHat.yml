@@ -1,0 +1,5 @@
+- name: install Apache on ubuntu
+  yum: 
+    name: "{{ package_name }}" 
+    state: latest
+   

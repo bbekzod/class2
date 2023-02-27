@@ -1,0 +1,11 @@
+- hosts: all
+  tasks:
+  - debug:
+      msg: "{{ ansible_os_family }}"
+
+  - include_tasks: "{{ ansible_os_family}}.yml"
+
+  - name: install Apache
+    package:
+      name: "{{ package_name }}"
+      state: present
